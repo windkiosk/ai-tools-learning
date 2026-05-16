@@ -123,6 +123,7 @@ Putting it together at production scale.
 - [ ] Read "Attention Is All You Need" (Transformer architecture)
 - [ ] Read "ReAct: Synergizing Reasoning and Acting in Language Models"
 - [ ] Analyze the [leaked Claude Code repo](https://github.com/codeaashu/claude-code)
+- [ ] Analyze the [VideoCode repo](https://github.com/MarkTechStation/VideoCode) (Agent study)
 - [ ] Read "Building effective agents" (Anthropic) — up next
 - [x] Read basic workflow patterns cookbook
 - [ ] Read MCP spec
