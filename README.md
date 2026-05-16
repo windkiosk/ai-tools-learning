@@ -11,9 +11,13 @@
 
 Learn in this order — each builds on the previous.
 
+### 0. Foundational Theory
+- Read: [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — The seminal paper that introduced the Transformer architecture.
+
 ### 1. Agent
 What it is: a model in a loop (perceive → think → act → repeat)
 
+- Read: [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) — how models interleave reasoning and action.
 - Read: [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) — Anthropic, ~30 min
 - Read: [Basic agent workflow patterns](https://platform.claude.com/cookbook/patterns-agents-basic-workflows) — chaining, parallelization, routing ✓
 - Goal: understand the loop, understand why agents fail (hallucination, tool errors, infinite loops)
@@ -116,10 +120,15 @@ Putting it together at production scale.
 ## Current Progress
 
 - [x] Understood agent/MCP/harness/skill conceptually
+- [ ] Read "Attention Is All You Need" (Transformer architecture)
+- [ ] Read "ReAct: Synergizing Reasoning and Acting in Language Models"
+- [ ] Analyze the [leaked Claude Code repo](https://github.com/codeaashu/claude-code)
 - [ ] Read "Building effective agents" (Anthropic) — up next
 - [x] Read basic workflow patterns cookbook
 - [ ] Read MCP spec
 - [ ] Build a minimal MCP server
 - [ ] Wire MCP server into Claude Code
 - [ ] Build a tool with retry + idempotency
+- [ ] Set up promptfoo, write first eval suite
+] Build a tool with retry + idempotency
 - [ ] Set up promptfoo, write first eval suite
