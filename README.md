@@ -33,10 +33,16 @@ What it is: standard protocol for connecting agents to external tools
 - Goal: understand the handshake — how a model discovers tools, calls them, handles results
 
 ### 3. Harness
-What it is: the scaffolding that runs agents (lifecycle, permissions, memory, retries)
+What it is: the scaffolding that runs agents (lifecycle, permissions, memory, retries) and the **environment** they inhabit.
 
+- Read: [Harness Engineering](https://openai.com/index/harness-engineering/) (OpenAI) — why the "harness" is the primary product in an agentic world.
+- **Deep Dive**: [Session 1: Harness Engineering](./sessions/01_harness_engineering.md) — breakdown of practical implementation.
 - Observe: Claude Code *is* a harness — use it as your reference implementation
 - Read: `.claude/settings.json` structure, how hooks work, how skills are registered
+- Key Practices:
+    - **Legibility**: Move design docs and "core beliefs" into the repo as Markdown so agents can reason about them.
+    - **Observability**: Give agents access to logs (LogQL) and metrics (PromQL) so they can debug autonomously.
+    - **Rigid Architecture**: Use strict patterns and linters to prevent AI-generated "slop" and architectural drift.
 - Goal: understand what you'd have to build yourself if the harness didn't exist
 
 ### 4. Skills
@@ -128,6 +134,7 @@ Putting it together at production scale.
 - [ ] Analyze the [leaked Claude Code repo](https://github.com/codeaashu/claude-code)
 - [ ] Analyze the [VideoCode repo](https://github.com/MarkTechStation/VideoCode) (Agent study)
 - [ ] Read "Building effective agents" (Anthropic) — up next
+- [ ] Read OpenAI's [Harness Engineering](https://openai.com/index/harness-engineering/) blog post
 - [x] Read basic workflow patterns cookbook
 - [ ] Study "Plan-and-Execute" implementations (LangGraph/LangChain)
 - [ ] Read MCP spec
