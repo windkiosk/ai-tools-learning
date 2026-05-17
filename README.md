@@ -18,9 +18,11 @@ Learn in this order — each builds on the previous.
 What it is: a model in a loop (perceive → think → act → repeat)
 
 - Read: [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) — how models interleave reasoning and action.
+- Read: [Plan-and-Solve Prompting](https://arxiv.org/abs/2305.04091) — why devising a plan first improves reasoning.
 - Read: [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) — Anthropic, ~30 min
 - Read: [Basic agent workflow patterns](https://platform.claude.com/cookbook/patterns-agents-basic-workflows) — chaining, parallelization, routing ✓
-- Goal: understand the loop, understand why agents fail (hallucination, tool errors, infinite loops)
+- Explore: [Plan-and-Execute Agents (LangChain)](https://python.langchain.com/v0.1/docs/modules/agents/agent_types/plan_and_execute/) and [LangGraph Tutorial](https://langchain-ai.github.io/langgraph/tutorials/plan-and-execute/plan-and-execute/).
+- Goal: understand the loop, understand why agents fail (hallucination, tool errors, infinite loops), and when to use planning vs. reactive patterns.
 
 ### 2. MCP (Model Context Protocol)
 What it is: standard protocol for connecting agents to external tools
@@ -122,10 +124,12 @@ Putting it together at production scale.
 - [x] Understood agent/MCP/harness/skill conceptually
 - [ ] Read "Attention Is All You Need" (Transformer architecture)
 - [ ] Read "ReAct: Synergizing Reasoning and Acting in Language Models"
+- [ ] Read "Plan-and-Solve Prompting" (Planning pattern)
 - [ ] Analyze the [leaked Claude Code repo](https://github.com/codeaashu/claude-code)
 - [ ] Analyze the [VideoCode repo](https://github.com/MarkTechStation/VideoCode) (Agent study)
 - [ ] Read "Building effective agents" (Anthropic) — up next
 - [x] Read basic workflow patterns cookbook
+- [ ] Study "Plan-and-Execute" implementations (LangGraph/LangChain)
 - [ ] Read MCP spec
 - [ ] Build a minimal MCP server
 - [ ] Wire MCP server into Claude Code
