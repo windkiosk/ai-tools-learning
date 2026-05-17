@@ -1,6 +1,9 @@
-# Session 1: Harness Engineering (The OpenAI Blueprint)
+# Session 1: Harness Engineering
 
-Derived from: [Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering/)
+Derived from: 
+- [Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering/) (OpenAI)
+- [Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) (Anthropic)
+- [Harness Design for Long-Running Apps](https://www.anthropic.com/engineering/harness-design-long-running-apps) (Anthropic)
 
 ## The Core Shift
 Stop trying to "fix the prompt." Start fixing the **environment** (the harness). If the agent fails, it's usually because it lacks the necessary **legibility, observability, or tools**.
