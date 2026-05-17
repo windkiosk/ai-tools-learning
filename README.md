@@ -4,6 +4,7 @@
 - Goal: build *with* AI reliably, not build AI itself
 - Learn concepts before tools — tools change, concepts don't
 - Go deep enough to understand failure modes, not just happy paths
+- Read: [My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey) (Mitchell Hashimoto) — a high-signal case study on building leverage.
 
 ---
 
@@ -137,6 +138,7 @@ Putting it together at production scale.
 - [ ] Analyze the [VideoCode repo](https://github.com/MarkTechStation/VideoCode) (Agent study)
 - [ ] Read "Building effective agents" (Anthropic) — up next
 - [ ] Read OpenAI's [Harness Engineering](https://openai.com/index/harness-engineering/) blog post
+- [ ] Read Mitchell Hashimoto's [AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey)
 - [ ] Read Anthropic's [Effective Harnesses](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
 - [ ] Read Anthropic's [Harness Design](https://www.anthropic.com/engineering/harness-design-long-running-apps)
 - [x] Read basic workflow patterns cookbook
