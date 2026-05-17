@@ -37,6 +37,7 @@ What it is: standard protocol for connecting agents to external tools
 What it is: the scaffolding that runs agents (lifecycle, permissions, memory, retries) and the **environment** they inhabit.
 
 - Read: [Harness Engineering](https://openai.com/index/harness-engineering/) (OpenAI) — why the "harness" is the primary product in an agentic world.
+- Read: [Harness Engineering Memo](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering-memo.html) (Martin Fowler) — practical takeaways for software engineers.
 - Read: [Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) (Anthropic)
 - Read: [Harness Design for Long-Running Apps](https://www.anthropic.com/engineering/harness-design-long-running-apps) (Anthropic)
 - **Deep Dive**: [Session 1: Harness Engineering](./sessions/01_harness_engineering.md) — breakdown of practical implementation.
@@ -138,6 +139,7 @@ Putting it together at production scale.
 - [ ] Analyze the [VideoCode repo](https://github.com/MarkTechStation/VideoCode) (Agent study)
 - [ ] Read "Building effective agents" (Anthropic) — up next
 - [ ] Read OpenAI's [Harness Engineering](https://openai.com/index/harness-engineering/) blog post
+- [ ] Read Martin Fowler's [Harness Engineering Memo](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering-memo.html)
 - [ ] Read Mitchell Hashimoto's [AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey)
 - [ ] Read Anthropic's [Effective Harnesses](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
 - [ ] Read Anthropic's [Harness Design](https://www.anthropic.com/engineering/harness-design-long-running-apps)
