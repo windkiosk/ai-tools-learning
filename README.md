@@ -57,6 +57,12 @@ What it is: reusable, named behaviors packaged for the harness to invoke
 - Do: read an existing skill implementation
 - Goal: understand skills as harness-level abstractions, distinct from MCP tools
 
+### 5. Reference Architectures
+What it is: real-world examples of complex agentic systems
+
+- Explore: [Anthropic Financial Services](https://github.com/anthropics/financial-services) — a comprehensive blueprint for vertical agents (Investment Banking, Research, etc.) using modular skills and MCP connectors.
+- Goal: study how to move from generic "chat" to specialized, tool-heavy workflows.
+
 ---
 
 ## Phase 2: Tool Reliability
@@ -147,6 +153,7 @@ Putting it together at production scale.
 - [ ] Read Anthropic's [Harness Design](https://www.anthropic.com/engineering/harness-design-long-running-apps)
 - [x] Read basic workflow patterns cookbook
 - [ ] Study "Plan-and-Execute" implementations (LangGraph/LangChain)
+- [ ] Analyze [Anthropic Financial Services](https://github.com/anthropics/financial-services) architecture
 - [ ] Read MCP spec
 - [ ] Build a minimal MCP server
 - [ ] Wire MCP server into Claude Code
