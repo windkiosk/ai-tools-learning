@@ -139,7 +139,7 @@ Putting it together at production scale.
 ## Current Progress
 
 - [x] Understood agent/MCP/harness/skill conceptually
-- [ ] Read "Attention Is All You Need" (Transformer architecture)
+- [x] Read "Attention Is All You Need" (Transformer architecture)
 - [ ] Read "ReAct: Synergizing Reasoning and Acting in Language Models"
 - [ ] Read "Plan-and-Solve Prompting" (Planning pattern)
 - [ ] Analyze the [leaked Claude Code repo](https://github.com/codeaashu/claude-code)
@@ -158,6 +158,4 @@ Putting it together at production scale.
 - [ ] Build a minimal MCP server
 - [ ] Wire MCP server into Claude Code
 - [ ] Build a tool with retry + idempotency
-- [ ] Set up promptfoo, write first eval suite
-] Build a tool with retry + idempotency
 - [ ] Set up promptfoo, write first eval suite
