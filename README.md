@@ -139,7 +139,7 @@ Putting it together at production scale.
 ## Current Progress
 
 - [x] Understood agent/MCP/harness/skill conceptually
-- [x] Read "Attention Is All You Need" (Transformer architecture)
+- [ ] Read "Attention Is All You Need" (Transformer architecture) — partially read, revisit later
 - [ ] Read "ReAct: Synergizing Reasoning and Acting in Language Models"
 - [ ] Read "Plan-and-Solve Prompting" (Planning pattern)
 - [ ] Analyze the [leaked Claude Code repo](https://github.com/codeaashu/claude-code)
