@@ -42,6 +42,8 @@ What it is: the scaffolding that runs agents (lifecycle, permissions, memory, re
 - Read: [The Anatomy of an Agent Harness](https://www.langchain.com/blog/the-anatomy-of-an-agent-harness) (LangChain) — architectural breakdown.
 - Read: [Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) (Anthropic)
 - Read: [Harness Design for Long-Running Apps](https://www.anthropic.com/engineering/harness-design-long-running-apps) (Anthropic)
+- Read: [Managed Agents](https://www.anthropic.com/engineering/managed-agents) (Anthropic) — decouples the model from execution environment/session storage via stable interfaces, so the harness can evolve without re-encoding assumptions about what Claude can't do.
+- Read: [Claude Managed Agents overview](https://platform.claude.com/docs/en/managed-agents/overview) (Anthropic docs) — the product surface for the above: agent/environment/session/event model, hosted vs. self-hosted sandboxes.
 - **Deep Dive**: [Session 1: Harness Engineering](./sessions/01_harness_engineering.md) — breakdown of practical implementation.
 - Observe: Claude Code *is* a harness — use it as your reference implementation
 - Read: `.claude/settings.json` structure, how hooks work, how skills are registered
@@ -145,7 +147,7 @@ Putting it together at production scale.
 - [ ] Read "Plan-and-Solve Prompting" (Planning pattern)
 - [ ] Analyze the [leaked Claude Code repo](https://github.com/codeaashu/claude-code)
 - [ ] Analyze the [VideoCode repo](https://github.com/MarkTechStation/VideoCode) (Agent study)
-- [ ] Read "Building effective agents" (Anthropic) — up next
+- [x] Read "Building effective agents" (Anthropic) — very helpful
 - [ ] Read "Raising the bar on SWE-bench Verified" (Anthropic)
 - [ ] Read OpenAI's [Harness Engineering](https://openai.com/index/harness-engineering/) blog post
 - [ ] Read Martin Fowler's [Harness Engineering Memo](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering-memo.html)
@@ -153,6 +155,8 @@ Putting it together at production scale.
 - [x] Read Mitchell Hashimoto's [AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey)
 - [ ] Read Anthropic's [Effective Harnesses](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
 - [ ] Read Anthropic's [Harness Design](https://www.anthropic.com/engineering/harness-design-long-running-apps)
+- [ ] Read Anthropic's [Managed Agents](https://www.anthropic.com/engineering/managed-agents)
+- [ ] Read [Claude Managed Agents overview](https://platform.claude.com/docs/en/managed-agents/overview) (docs)
 - [x] Read basic workflow patterns cookbook
 - [ ] Study "Plan-and-Execute" implementations (LangGraph/LangChain)
 - [ ] Analyze [Anthropic Financial Services](https://github.com/anthropics/financial-services) architecture
