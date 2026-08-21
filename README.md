@@ -64,6 +64,9 @@ What it is: reusable, named behaviors packaged for the harness to invoke
 What it is: real-world examples of complex agentic systems
 
 - Explore: [Anthropic Financial Services](https://github.com/anthropics/financial-services) — a comprehensive blueprint for vertical agents (Investment Banking, Research, etc.) using modular skills and MCP connectors.
+- Explore: [awesome-agentic-ai-zh](https://github.com/WenyuChiou/awesome-agentic-ai-zh) — curated (Chinese-language) list of agentic AI resources.
+- Explore: [ai-agent-book](https://github.com/bojieli/ai-agent-book) — book-length treatment of AI agent design.
+- Explore: [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners) — Microsoft's official intro course/repo on building AI agents.
 - Goal: study how to move from generic "chat" to specialized, tool-heavy workflows.
 
 ---
@@ -160,6 +163,9 @@ Putting it together at production scale.
 - [x] Read basic workflow patterns cookbook
 - [ ] Study "Plan-and-Execute" implementations (LangGraph/LangChain)
 - [ ] Analyze [Anthropic Financial Services](https://github.com/anthropics/financial-services) architecture
+- [ ] Study [awesome-agentic-ai-zh](https://github.com/WenyuChiou/awesome-agentic-ai-zh)
+- [ ] Study [ai-agent-book](https://github.com/bojieli/ai-agent-book)
+- [ ] Study [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners) (Microsoft)
 - [ ] Read MCP spec
 - [ ] Build a minimal MCP server
 - [ ] Wire MCP server into Claude Code
