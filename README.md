@@ -10,10 +10,7 @@
 
 ## Phase 1: Core Concepts (Foundation)
 
-Learn in this order — each builds on the previous.
-
-### 0. Foundational Theory
-- Read: [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — The seminal paper that introduced the Transformer architecture.
+Learn in this order — each builds on the previous. This phase is the vocabulary for AI infra/agent engineering; model-internals theory (e.g. Transformer architecture) is out of scope — not required to build, harness, or operate agents.
 
 ### 1. Agent
 What it is: a model in a loop (perceive → think → act → repeat)
@@ -21,7 +18,6 @@ What it is: a model in a loop (perceive → think → act → repeat)
 - Read: [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629) — how models interleave reasoning and action.
 - Read: [Plan-and-Solve Prompting](https://arxiv.org/abs/2305.04091) — why devising a plan first improves reasoning.
 - Read: [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) — Anthropic, ~30 min
-- Read: [Raising the bar on SWE-bench Verified](https://www.anthropic.com/engineering/swe-bench-sonnet) — Anthropic; case study in minimal scaffolding + agent-computer interface (tool doc/spec) design for a coding agent
 - Read: [Basic agent workflow patterns](https://platform.claude.com/cookbook/patterns-agents-basic-workflows) — chaining, parallelization, routing ✓
 - Explore: [Plan-and-Execute Agents (LangChain)](https://python.langchain.com/v0.1/docs/modules/agents/agent_types/plan_and_execute/) and [LangGraph Tutorial](https://langchain-ai.github.io/langgraph/tutorials/plan-and-execute/plan-and-execute/).
 - Goal: understand the loop, understand why agents fail (hallucination, tool errors, infinite loops), and when to use planning vs. reactive patterns.
@@ -60,15 +56,14 @@ What it is: reusable, named behaviors packaged for the harness to invoke
 - Do: read an existing skill implementation
 - Goal: understand skills as harness-level abstractions, distinct from MCP tools
 
-### 5. Reference Architectures
-What it is: real-world examples of complex agentic systems
+### 5. Context Engineering & Retrieval
+What it is: how you get the *right* information into a finite context window — the dominant lever for both agent reliability and cost.
 
-- Explore: [Anthropic Financial Services](https://github.com/anthropics/financial-services) — a comprehensive blueprint for vertical agents (Investment Banking, Research, etc.) using modular skills and MCP connectors.
-- Explore: [awesome-agentic-ai-zh](https://github.com/WenyuChiou/awesome-agentic-ai-zh) — curated (Chinese-language) list of agentic AI resources.
-- Explore: [ai-agent-book](https://github.com/bojieli/ai-agent-book) — book-length treatment of AI agent design.
-- Explore: [Agentic Design Patterns](https://github.com/evoiz/Agentic-Design-Patterns) — Antonio Gulli's hands-on guide covering foundational, advanced, and production agent patterns with code notebooks.
-- Explore: [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners) — Microsoft's official intro course/repo on building AI agents.
-- Goal: study how to move from generic "chat" to specialized, tool-heavy workflows.
+- Read: [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic; context as a finite, precious resource, and strategies (compaction, tool-result clearing, memory) for managing it across a long agent run.
+- Read: [Contextual Retrieval](https://www.anthropic.com/engineering/contextual-retrieval) — Anthropic; the standard fix for the "lost context" problem when chunking documents for RAG (reduces failed retrievals significantly, per their benchmarks).
+- Read: [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) (Lewis et al., 2020) — the paper that defined the RAG pattern: retrieval and generation as decoupled components. Included because it's the architecture, not the model math.
+- Do: build a minimal retrieval pipeline yourself (plain embeddings + cosine similarity, no framework) before reaching for a vector database — understand what the abstraction is actually doing.
+- Goal: know when retrieval beats a bigger context window (and vice versa), and understand failure modes — irrelevant/stale chunks, lost-in-the-middle, context poisoning from untrusted retrieved content.
 
 ---
 
@@ -85,6 +80,7 @@ The gap between a demo agent and a production agent is mostly reliability.
 
 ### Resources
 - Anthropic tool use docs (error handling section)
+- Read: [Raising the bar on SWE-bench Verified](https://www.anthropic.com/engineering/swe-bench-sonnet) — Anthropic; case study in minimal scaffolding + agent-computer interface (tool doc/spec) design for a coding agent
 - Read production postmortems from teams shipping agents (search Substack, eng blogs)
 - Study how Claude Code handles tool permission failures and retries in practice
 
@@ -134,6 +130,19 @@ Putting it together at production scale.
 
 ---
 
+## Phase 5: Case Studies (Reference Architectures)
+
+Real-world examples of complex agentic systems. Placed last deliberately — these are worked systems that combine tool reliability, evals, and production concerns, so they read very differently once those phases are behind you than they would as a Phase 1 primer.
+
+- Explore: [Anthropic Financial Services](https://github.com/anthropics/financial-services) — a comprehensive blueprint for vertical agents (Investment Banking, Research, etc.) using modular skills and MCP connectors.
+- Explore: [awesome-agentic-ai-zh](https://github.com/WenyuChiou/awesome-agentic-ai-zh) — curated (Chinese-language) list of agentic AI resources.
+- Explore: [ai-agent-book](https://github.com/bojieli/ai-agent-book) — book-length treatment of AI agent design.
+- Explore: [Agentic Design Patterns](https://github.com/evoiz/Agentic-Design-Patterns) — Antonio Gulli's hands-on guide covering foundational, advanced, and production agent patterns with code notebooks.
+- Explore: [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners) — Microsoft's official intro course/repo on building AI agents.
+- Goal: study how to move from generic "chat" to specialized, tool-heavy workflows — now with a working vocabulary for evaluating *why* each architecture makes the reliability/eval/systems tradeoffs it does.
+
+---
+
 ## Career Context
 
 - Core LLM development is consolidating at a few labs — not the growth path for most engineers
@@ -145,31 +154,46 @@ Putting it together at production scale.
 
 ## Current Progress
 
+### General
+- [x] Read Mitchell Hashimoto's [AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey)
+
+### Phase 1: Core Concepts
 - [x] Understood agent/MCP/harness/skill conceptually
-- [ ] Read "Attention Is All You Need" (Transformer architecture) — partially read, revisit later
 - [ ] Read "ReAct: Synergizing Reasoning and Acting in Language Models"
 - [ ] Read "Plan-and-Solve Prompting" (Planning pattern)
 - [ ] Analyze the [leaked Claude Code repo](https://github.com/codeaashu/claude-code)
 - [ ] Analyze the [VideoCode repo](https://github.com/MarkTechStation/VideoCode) (Agent study)
 - [x] Read "Building effective agents" (Anthropic) — very helpful
-- [ ] Read "Raising the bar on SWE-bench Verified" (Anthropic)
+- [x] Read basic workflow patterns cookbook
+- [ ] Study "Plan-and-Execute" implementations (LangGraph/LangChain)
+- [ ] Read MCP spec
+- [ ] Build a minimal MCP server
+- [ ] Wire MCP server into Claude Code
 - [ ] Read OpenAI's [Harness Engineering](https://openai.com/index/harness-engineering/) blog post
 - [ ] Read Martin Fowler's [Harness Engineering Memo](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering-memo.html)
 - [ ] Read LangChain's [Anatomy of an Agent Harness](https://www.langchain.com/blog/the-anatomy-of-an-agent-harness)
-- [x] Read Mitchell Hashimoto's [AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey)
 - [ ] Read Anthropic's [Effective Harnesses](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
 - [ ] Read Anthropic's [Harness Design](https://www.anthropic.com/engineering/harness-design-long-running-apps)
 - [ ] Read Anthropic's [Managed Agents](https://www.anthropic.com/engineering/managed-agents)
 - [ ] Read [Claude Managed Agents overview](https://platform.claude.com/docs/en/managed-agents/overview) (docs)
-- [x] Read basic workflow patterns cookbook
-- [ ] Study "Plan-and-Execute" implementations (LangGraph/LangChain)
+- [ ] Read Anthropic's [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [ ] Read Anthropic's [Contextual Retrieval](https://www.anthropic.com/engineering/contextual-retrieval)
+- [ ] Read the RAG paper (Lewis et al., 2020)
+- [ ] Build a minimal retrieval pipeline (raw embeddings + cosine similarity)
+
+### Phase 2: Tool Reliability
+- [ ] Read "Raising the bar on SWE-bench Verified" (Anthropic)
+- [ ] Build a tool with retry + idempotency
+
+### Phase 3: Evaluation
+- [ ] Set up promptfoo, write first eval suite
+
+### Phase 4: Systems Thinking
+- [ ] (none started yet)
+
+### Phase 5: Case Studies
 - [ ] Analyze [Anthropic Financial Services](https://github.com/anthropics/financial-services) architecture
 - [ ] Study [awesome-agentic-ai-zh](https://github.com/WenyuChiou/awesome-agentic-ai-zh)
 - [ ] Study [ai-agent-book](https://github.com/bojieli/ai-agent-book)
 - [ ] Study [Agentic Design Patterns](https://github.com/evoiz/Agentic-Design-Patterns) (Antonio Gulli)
 - [ ] Study [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners) (Microsoft)
-- [ ] Read MCP spec
-- [ ] Build a minimal MCP server
-- [ ] Wire MCP server into Claude Code
-- [ ] Build a tool with retry + idempotency
-- [ ] Set up promptfoo, write first eval suite
