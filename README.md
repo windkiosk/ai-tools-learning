@@ -41,6 +41,10 @@ What it is: the scaffolding that runs agents (lifecycle, permissions, memory, re
 - Read: [Managed Agents](https://www.anthropic.com/engineering/managed-agents) (Anthropic) — decouples the model from execution environment/session storage via stable interfaces, so the harness can evolve without re-encoding assumptions about what Claude can't do.
 - Read: [Claude Managed Agents overview](https://platform.claude.com/docs/en/managed-agents/overview) (Anthropic docs) — the product surface for the above: agent/environment/session/event model, hosted vs. self-hosted sandboxes.
 - **Deep Dive**: [Session 1: Harness Engineering](./sessions/01_harness_engineering.md) — breakdown of practical implementation.
+- Read: [Loop Engineering vs. Graph Engineering](https://medium.com/@neuraldev/loop-engineering-vs-graph-engineering-the-architecture-shift-quietly-reshaping-ai-agents-c83488435d23) (Uday Sharma) — one level above the harness: how you shape an agent's control flow, as a single growing-transcript loop vs. an explicit node/edge graph.
+- Read: [Agent Harness Engineering vs. Loop Engineering vs. Graph Engineering](https://medium.com/@bijit211987/agent-harness-engineering-vs-loop-engineering-vs-graph-engineering-44a967d6b975) (Bijit Ghosh) — situates all three terms relative to each other.
+- Read: [3 Years of Graph Engineering with LangGraph](https://www.langchain.com/blog/3-years-of-graph-engineering-with-langgraph) — practitioner retrospective from the team that built the graph-based approach.
+- **Deep Dive**: [Session 2: Loop Engineering vs. Graph Engineering](./sessions/02_loop_vs_graph_engineering.md) — when a single-loop agent should be factored into an explicit graph.
 - Observe: Claude Code *is* a harness — use it as your reference implementation
 - Read: `.claude/settings.json` structure, how hooks work, how skills are registered
 - Key Practices:
@@ -176,6 +180,9 @@ Real-world examples of complex agentic systems. Placed last deliberately — the
 - [ ] Read Anthropic's [Harness Design](https://www.anthropic.com/engineering/harness-design-long-running-apps)
 - [ ] Read Anthropic's [Managed Agents](https://www.anthropic.com/engineering/managed-agents)
 - [ ] Read [Claude Managed Agents overview](https://platform.claude.com/docs/en/managed-agents/overview) (docs)
+- [ ] Read [Loop Engineering vs. Graph Engineering](https://medium.com/@neuraldev/loop-engineering-vs-graph-engineering-the-architecture-shift-quietly-reshaping-ai-agents-c83488435d23) (Uday Sharma)
+- [ ] Read [Agent Harness Engineering vs. Loop Engineering vs. Graph Engineering](https://medium.com/@bijit211987/agent-harness-engineering-vs-loop-engineering-vs-graph-engineering-44a967d6b975) (Bijit Ghosh)
+- [ ] Read [3 Years of Graph Engineering with LangGraph](https://www.langchain.com/blog/3-years-of-graph-engineering-with-langgraph)
 - [ ] Read Anthropic's [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 - [ ] Read Anthropic's [Contextual Retrieval](https://www.anthropic.com/engineering/contextual-retrieval)
 - [ ] Read the RAG paper (Lewis et al., 2020)
