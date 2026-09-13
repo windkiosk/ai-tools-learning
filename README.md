@@ -5,6 +5,7 @@
 - Learn concepts before tools — tools change, concepts don't
 - Go deep enough to understand failure modes, not just happy paths
 - Read: [My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey) (Mitchell Hashimoto) — a high-signal case study on building leverage.
+- Read: [The AI Engineering Skills Map](https://x.com/AndrewYNg/article/2088302050706686198) (Andrew Ng) — a field-wide skill taxonomy (building/deploying AI apps, SWE fundamentals, coding agents, shaping the build) derived from 10k+ job postings; useful as an external cross-check on this roadmap's phase structure.
 
 ---
 
@@ -58,6 +59,7 @@ What it is: reusable, named behaviors packaged for the harness to invoke
 
 - Observe: skills available in Claude Code (`/help`)
 - Do: read an existing skill implementation
+- Explore: [pstack](https://github.com/cursor/plugins/tree/main/pstack) — a Cursor plugin bundling skills, playbooks, and subagent orchestration (`/poteto-mode`) into a rigorous engineering workflow; useful cross-reference for how a different harness (Cursor) packages the same skill/playbook abstraction.
 - Goal: understand skills as harness-level abstractions, distinct from MCP tools
 
 ### 5. Context Engineering & Retrieval
@@ -160,6 +162,7 @@ Real-world examples of complex agentic systems. Placed last deliberately — the
 
 ### General
 - [x] Read Mitchell Hashimoto's [AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey)
+- [ ] Read Andrew Ng's [The AI Engineering Skills Map](https://x.com/AndrewYNg/article/2088302050706686198)
 
 ### Phase 1: Core Concepts
 - [x] Understood agent/MCP/harness/skill conceptually
@@ -173,6 +176,7 @@ Real-world examples of complex agentic systems. Placed last deliberately — the
 - [ ] Read MCP spec
 - [ ] Build a minimal MCP server
 - [ ] Wire MCP server into Claude Code
+- [ ] Explore [pstack](https://github.com/cursor/plugins/tree/main/pstack) (Cursor plugin)
 - [ ] Read OpenAI's [Harness Engineering](https://openai.com/index/harness-engineering/) blog post
 - [ ] Read Martin Fowler's [Harness Engineering Memo](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering-memo.html)
 - [ ] Read LangChain's [Anatomy of an Agent Harness](https://www.langchain.com/blog/the-anatomy-of-an-agent-harness)
